@@ -9,7 +9,7 @@ cas_version=$1
 if [ $# -eq 0 ] || [ -z "$cas_version" ]
   then
     echo "No CAS version is specified."
-    read -p "Provide a tag for the CAS image you are about to build (i.e. 5.0.0): " cas_version;
+    read -p "Provide a tag for the CAS image you are about to build (i.e. 5.1.3): " cas_version;
 fi
 
 image_tag="latest"
@@ -29,9 +29,9 @@ if [ ! -z "$cas_version" ]
 from branch ${YELLOW}[$branch_name]${NORMAL}"
     read -p "Press ${YELLOW}[Enter]${NORMAL} to continue..." any_key;
 
-	  docker build --tag="apereo/cas:$image_tag" --build-arg cas_version=$cas_version . && \
+	  docker build --tag="huuhuy/cas:$imge_tag" --build-arg cas_version=$cas_version . && \
         echo "Built CAS image successfully tagged as $image_tag" && \
-        docker images "apereo/cas:$image_tag"
+        docker images "huuhuy/cas:$image_tag"
     exit 0
 fi
 
