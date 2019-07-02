@@ -46,7 +46,7 @@ RUN cd / \
 
 # Download the CAS overlay project \
 RUN cd / \
-    && git clone --depth 1 --single-branch 5.3.9_restful_authentication --single-branch https://github.com/nguyenhuuhuy/cas-overlay-template.git cas-overlay \
+    && git clone --depth 1 --single-branch -b 5.3.9_restful_authentication https://github.com/nguyenhuuhuy/cas-overlay-template.git cas-overlay \
     && mkdir -p /etc/cas \
     && mkdir -p cas-overlay/bin;
 
